@@ -2,6 +2,19 @@ apply plugin: 'com.android.application'
 
 android {
 
+    productFlavors {
+        xiaomi {
+        }
+
+        baidu {
+        }
+
+        tengxun {
+
+        }
+    }
+
+
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
 
