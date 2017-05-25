@@ -20,6 +20,8 @@ public class SampleApplicationLike extends DefaultApplicationLike {
 
     public static final String TAG = "Tinker.SampleApplicationLike";
 
+    public static final boolean DEBUG = false;
+
     public SampleApplicationLike(Application application, int tinkerFlags,
                                  boolean tinkerLoadVerifyFlag, long applicationStartElapsedTime,
                                  long applicationStartMillisTime, Intent tinkerResultIntent) {
@@ -32,9 +34,9 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         super.onCreate();
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
         // 调试时，将第三个参数改为true
-        Bugly.init(getApplication(), "7de60a8bd2", false);
+        Bugly.init(getApplication(), "3afcd9c708", DEBUG);
 
-        CrashReport.initCrashReport(getApplication(), "7de60a8bd2", false);
+        CrashReport.initCrashReport(getApplication(), "3afcd9c708", DEBUG);
     }
 
 

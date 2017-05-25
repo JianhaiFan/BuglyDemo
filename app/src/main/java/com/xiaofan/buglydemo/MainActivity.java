@@ -2,6 +2,7 @@ package com.xiaofan.buglydemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this,"Version：" + ManifestUtil.getVersionCode(this),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"version：" + ManifestUtil.getVersionCode(this),Toast.LENGTH_LONG).show();
     }
 
     public void click(View v) {
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         String strTest = "fan";
         if (str.equalsIgnoreCase(strTest)) {
             Toast.makeText(MainActivity.this,str,Toast.LENGTH_LONG).show();
+            Log.e(TAG,"hehe.......");
         }
-
     }
 }
