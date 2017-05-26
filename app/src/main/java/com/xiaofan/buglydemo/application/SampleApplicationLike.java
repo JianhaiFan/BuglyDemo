@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.multidex.MultiDex;
 
+import com.meituan.android.walle.WalleChannelReader;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
+import com.xiaofan.buglydemo.MainActivity;
 
 /**
  * Created by fanjianhai on 2017/5/21.
@@ -32,6 +34,11 @@ public class SampleApplicationLike extends DefaultApplicationLike {
     @Override
     public void onCreate() {
         super.onCreate();
+        // 设置多渠道
+        String channel = WalleChannelReader.getChannel(getApplication());
+        MainActivity.channelValue = channel;
+        Bugly.setAppChannel(getApplication(), channel);
+
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
         // 调试时，将第三个参数改为true
         Bugly.init(getApplication(), "3afcd9c708", DEBUG);

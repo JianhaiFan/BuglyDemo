@@ -12,12 +12,14 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
 
+    public static String channelValue = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this,"version：" + ManifestUtil.getVersionCode(this),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"version：" + ManifestUtil.getVersionCode(this) + "渠道信息：" + channelValue ,Toast.LENGTH_LONG).show();
     }
 
     public void click(View v) {
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //        String str = null;
         String strTest = "fan";
         if (str.equalsIgnoreCase(strTest)) {
-            Toast.makeText(MainActivity.this,str,Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,"加固版本...",Toast.LENGTH_LONG).show();
             Log.e(TAG,"hehe.......");
         }
     }
