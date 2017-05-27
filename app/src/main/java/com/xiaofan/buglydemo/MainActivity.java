@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.tencent.bugly.beta.Beta;
 import com.xiaofan.buglydemo.util.ManifestUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,8 +29,13 @@ public class MainActivity extends AppCompatActivity {
 //        String str = null;
         String strTest = "fan";
         if (str.equalsIgnoreCase(strTest)) {
-            Toast.makeText(MainActivity.this,"加固版本...",Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,"我是版本更新过来的...",Toast.LENGTH_LONG).show();
             Log.e(TAG,"hehe.......");
         }
+    }
+
+    public void click1(View v) {
+        Toast.makeText(this,"click1...." ,Toast.LENGTH_LONG).show();
+        Beta.checkUpgrade();
     }
 }

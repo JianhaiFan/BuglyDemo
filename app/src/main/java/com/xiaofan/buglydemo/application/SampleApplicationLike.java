@@ -37,7 +37,6 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         // 设置多渠道
         String channel = WalleChannelReader.getChannel(getApplication());
         MainActivity.channelValue = channel;
-        Bugly.setAppChannel(getApplication(), channel);
 
         // 这里实现SDK初始化，appId替换成你的在Bugly平台申请的appId
         // 调试时，将第三个参数改为true
@@ -53,7 +52,6 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         super.onBaseContextAttached(base);
         // you must install multiDex whatever tinker is installed!
         MultiDex.install(base);
-
         // 安装tinker
         // TinkerManager.installTinker(this); 替换成下面Bugly提供的方法
         Beta.installTinker(this);
