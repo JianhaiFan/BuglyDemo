@@ -52,6 +52,10 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         super.onBaseContextAttached(base);
         // you must install multiDex whatever tinker is installed!
         MultiDex.install(base);
+
+        // 显示弹窗的界面
+        Beta.canShowUpgradeActs.add(MainActivity.class);
+
         // 安装tinker
         // TinkerManager.installTinker(this); 替换成下面Bugly提供的方法
         Beta.installTinker(this);
