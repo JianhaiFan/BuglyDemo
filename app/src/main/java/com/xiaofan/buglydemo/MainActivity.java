@@ -1,12 +1,12 @@
 package com.xiaofan.buglydemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.tencent.bugly.beta.Beta;
 import com.xiaofan.buglydemo.util.ManifestUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void click1(View v) {
         Toast.makeText(this,"click1...." ,Toast.LENGTH_LONG).show();
-        Beta.checkUpgrade();
+        startActivity(new Intent(this,SecondActivity.class));
     }
 }

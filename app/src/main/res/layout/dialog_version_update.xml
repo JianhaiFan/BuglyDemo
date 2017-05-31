@@ -1,155 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.xiaofan.buglydemo.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.xiaofan.buglydemo.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="@color/color_transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.xiaofan.buglydemo.percent.PercentLinearLayout
-        android:layout_marginTop="19dp"
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/shape_white_5dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:textColor="@color/color_white"
+        android:tag="beta_cancel_button" />
 
-        <com.xiaofan.buglydemo.percent.PercentRelativeLayout
+    <com.xiaofan.buglydemo.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_widthPercent="71%w"
+        app:layout_heightPercent="86%w"
+        >
+        <com.xiaofan.buglydemo.percent.PercentLinearLayout
+            app:layout_marginTopPercent="10%w"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/yms_dimens_180.0_px"
-            android:background="#F4F9FF"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_dialog_update_cancle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/yms_dimens_5.0_px"
-                android:layout_marginTop="@dimen/yms_dimens_5.0_px"
-                android:src="@drawable/img_dialog_update_cancle"
-                android:tag="beta_cancel_button"
-                android:visibility="visible" />
-
-            <TextView
-                android:id="@+id/tv_find_new_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/yms_dimens_80.0_px"
-                android:tag="beta_title"
-                android:text="@string/yxck_find_new_version"
-                android:textColor="@color/color_blue"
-                android:textSize="@dimen/yms_font_32_px" />
-
-            <TextView
-                android:id="@+id/tv_dialog_version_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_find_new_version"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/yms_dimens_7.0_px"
-                android:tag="beta_upgrade_info"
-                android:text="V1.0.1"
-                android:textColor="@color/color_blue" />
-        </com.xiaofan.buglydemo.percent.PercentRelativeLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_heightPercent="60%w">
-            <com.xiaofan.buglydemo.percent.PercentLinearLayout
-                android:orientation="vertical"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/color_white"
+            android:layout_height="match_parent"
+            >
+            <com.xiaofan.buglydemo.percent.PercentRelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="clip_horizontal"
+                android:background="@drawable/shape_other_5dp"
+                app:layout_heightPercent="36%w">
 
                 <TextView
-                    android:tag="beta_upgrade_feature"
-                    android:id="@+id/textView"
+                    android:id="@+id/tv_find_new_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/yms_dimens_44.0_px"
-                    android:layout_marginTop="@dimen/yms_dimens_20.0_px"
-                    android:text="@string/update_cotent"
-                    android:textColor="@color/color_black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/yms_dimens_70.0_px"
+                    android:tag="beta_title"
+                    android:text="@string/yxck_find_new_version"
+                    android:textColor="@color/color_blue"
                     android:textSize="@dimen/yms_font_30_px" />
 
                 <TextView
-                    android:id="@+id/tv_dialog_update_tip"
-                    android:textColor="@color/color_9c9c9c"
-                    android:textSize="@dimen/yms_font_28_px"
-                    android:layout_marginTop="@dimen/yms_dimens_20.0_px"
-                    android:layout_marginLeft="@dimen/yms_dimens_44.0_px"
-                    android:layout_marginRight="@dimen/yms_dimens_44.0_px"
-                    android:layout_marginBottom="@dimen/yms_dimens_40.0_px"
-                    android:text="1.新增患者会诊管理功能"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/tv_dialog_update_tip_two"
-                    android:textColor="@color/color_9c9c9c"
-                    android:textSize="@dimen/yms_font_28_px"
-                    android:layout_marginTop="@dimen/yms_dimens_10.0_px"
-                    android:layout_marginLeft="@dimen/yms_dimens_44.0_px"
-                    android:text="2.优化了部分交互设计"
+                    android:id="@+id/tv_dialog_version_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"/>
-                <TextView
-                    android:id="@+id/tv_dialog_update_tip_three"
-                    android:textColor="@color/color_9c9c9c"
-                    android:textSize="@dimen/yms_font_28_px"
-                    android:layout_marginTop="@dimen/yms_dimens_10.0_px"
-                    android:layout_marginLeft="@dimen/yms_dimens_44.0_px"
-                    android:text="3.修复了部分bug"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"/>
-                <TextView
-                    android:id="@+id/tv_dialog_update_tip_four"
-                    android:textColor="@color/color_9c9c9c"
-                    android:textSize="@dimen/yms_font_28_px"
-                    android:layout_marginTop="@dimen/yms_dimens_10.0_px"
-                    android:layout_marginLeft="@dimen/yms_dimens_44.0_px"
-                    android:text="4.新增的部分功能将开放"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"/>
-                <TextView
-                    android:id="@+id/tv_dialog_update_tip_five"
-                    android:textColor="@color/color_9c9c9c"
-                    android:textSize="@dimen/yms_font_28_px"
-                    android:layout_marginTop="@dimen/yms_dimens_10.0_px"
-                    android:layout_marginLeft="@dimen/yms_dimens_44.0_px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"/>
+                    android:layout_below="@+id/tv_find_new_version"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/yms_dimens_3.0_px"
+                    android:tag="beta_upgrade_info"
+                    android:text="V1.0.1"
+                    android:textColor="@color/color_blue" />
 
-            </com.xiaofan.buglydemo.percent.PercentLinearLayout>
-        </ScrollView>
-        <LinearLayout
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/yms_dimens_40.0_px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-             <Button
-                 android:tag="beta_confirm_button"
-                 android:id="@+id/bt_dialog_update_upgrade"
-                 android:textColor="@color/color_white"
-                 android:text="@string/update_right_away"
-                 android:background="@drawable/selector_shape_green_press_5px"
-                 android:layout_width="@dimen/yms_dimens_400.0_px"
-                 android:layout_height="@dimen/yms_dimens_82.0_px" />
-        </LinearLayout>
-    </com.xiaofan.buglydemo.percent.PercentLinearLayout>
-    <ImageView
-        android:scaleType="centerCrop"
-        android:src="@drawable/img_dialog_update_rocket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+            </com.xiaofan.buglydemo.percent.PercentRelativeLayout>
+
+            <com.xiaofan.buglydemo.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_white_5dp"
+                >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="更新内容:"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    app:layout_marginLeftPercent="8%w"
+                    app:layout_marginTopPercent="3%w"
+                    app:layout_marginBottomPercent="3%w"
+                    />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_marginLeftPercent="8%w"
+                    android:layout_above="@+id/bt_dialog_update_upgrade"
+                    android:layout_below="@+id/textView"
+                    android:scrollbars="none"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="beta_upgrade_feature"
+                            android:lineSpacingExtra="@dimen/yms_dimens_5.0_px"
+                            android:textSize="@dimen/yms_font_28_px"
+                            android:textColor="#9c9c9c"
+                            android:text="asdfasdfasdf"/>
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/bt_dialog_update_upgrade"
+                    android:layout_width="@dimen/yms_dimens_400.0_px"
+                    android:layout_height="@dimen/yms_dimens_82.0_px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/selector_shape_green_press_5px"
+                    android:tag="beta_confirm_button"
+                    android:text="@string/update_right_away"
+                    android:textColor="@color/color_white"
+                    app:layout_marginTopPercent="5%w"
+                    app:layout_marginBottomPercent="5%w" />
+
+            </com.xiaofan.buglydemo.percent.PercentRelativeLayout>
 
 
-</com.xiaofan.buglydemo.percent.PercentRelativeLayout>
+        </com.xiaofan.buglydemo.percent.PercentLinearLayout>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_dialog_update_rocket"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+    </com.xiaofan.buglydemo.percent.PercentRelativeLayout>
+
+</com.xiaofan.buglydemo.percent.PercentFrameLayout>
